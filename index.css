@@ -1,0 +1,61 @@
+body {
+    background-color: #F8EFEA;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(breakfast-from-above.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+    text-shadow: 2px 2px #192F01;
+}
+
+.topnav {
+    background-color: #192F01;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+}
+
+.topnav a {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 9px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.firstImg {
+    width: 100vw;
+    padding-top: 10px;
+    text-align: center;
+    height: 300px;
+}
+
+hr.rounded {
+    border-top: 8px solid #192f01;
+    border-radius: 5px;
+    width: 95%;
+}
+
+#fChickenB {}
+
+.chicken {
+    display: inline-block;
+}
