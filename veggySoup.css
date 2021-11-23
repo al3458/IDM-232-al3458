@@ -58,3 +58,9 @@ body {
     line-height: 1.6;
     padding-bottom: 50px;
 }
+
+@media screen and (max-width: 800px) {
+    #src {
+        width: 580px;
+    }
+}

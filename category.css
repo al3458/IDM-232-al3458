@@ -62,3 +62,9 @@ button {
     background-color: #192F01;
     background-size: cover;
 }
+
+@media screen and (max-width: 800px) {
+    #src {
+        width: 580px;
+    }
+}

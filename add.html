@@ -13,9 +13,17 @@
         <a href="index.html">Home</a>
         <a href="category.html">Categories</a>
         <a href="admin.html">Admin</a>
-        <form action="search.html"><input type="text" placeholder="Search.."></form>
+        <form id="src" action="search.html"><input type="text" placeholder="Search.."></form>
       </div>
 
+
+      <form method="post" action="phpstuff/addNew.php">
+        <input type="text" name="TITLE" placeholder="enter title"> <br>
+        <input type="text" name="Notes" placeholder="enter notes"> <br>
+        <input type="text" name="Ingredients" placeholder="enter ingredients"> <br>
+        <input type="text" name="Directions" placeholder="enter directions"> <br>
+        <button type="submit" name="submit">Save</button> <br>
+      </form>
       
 
       <div class="placeholders">

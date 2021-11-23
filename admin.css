@@ -55,3 +55,9 @@ hr.rounded {
     font-size: 24px;
 
 }
+
+@media screen and (max-width: 800px) {
+    #src {
+        width: 580px;
+    }
+}

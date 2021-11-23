@@ -59,3 +59,32 @@ hr.rounded {
 .chicken {
     display: inline-block;
 }
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-size: 200%;
+        background-position: center;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-size: 300%;
+        background-position: center;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-size: 400%;
+        background-position: center;
+    }
+
+    #src {
+        width: 580px;
+    }
+    
+}
+
