@@ -1,28 +1,18 @@
-<?php
-// $servername = "localhost";
-// $username = "username";
-// $password = "password";
-// $dbname = "myDB";
-
-// $id = $_GET['id']; // get id through query string
-
-// // Create connection
-// $conn = new mysqli($servername, $username, $password, $dbname);
-// // Check connection
-// if ($conn->connect_error) {
-//   die("Connection failed: " . $conn->connect_error);
-// }
-
-// $sql = "UPDATE MyGuests SET lastname='Doe' WHERE id='$id'";
-
-// if ($conn->query($sql) === TRUE) {
-//   echo "Record updated successfully";
-// } else {
-//   echo "Error updating record: " . $conn->error;
-// }
-
-// $conn->close();
-?>
+<head>
+<Script>
+            function updateBase64(){
+                var file = document.querySelector('input[type=file]')['files'][0];
+                var reader = new FileReader();
+                var baseString;
+                    reader.onloadend = function () {
+                    baseString = reader.result;
+                    document.getElementById("base64Image").value = baseString;
+                    console.log(baseString); 
+                };
+                reader.readAsDataURL(file);
+            }
+        </script>
+</head>
 
 <?php
 
@@ -40,8 +30,9 @@ if(isset($_POST['update'])) // when click on Update button
     $notes = $_POST['notes'];
     $ingredients = $_POST['ingredients'];
     $directions = $_POST['directions'];
+    $imageBase64 = $_POST['base64Image'];
 	
-    $edit = mysqli_query($conn,"update recipes set title='$title', Notes='$notes', Ingredients='$ingredients', Directions='$directions' where id='$id'");
+    $edit = mysqli_query($conn,"update recipes set title='$title', Notes='$notes', Ingredients='$ingredients', Directions='$directions', foodImage='$imageBase64' where id='$id'");
 	
     if($edit)
     {
@@ -64,6 +55,11 @@ if(isset($_POST['update'])) // when click on Update button
   <input type="text" name="notes" value="<?php echo $data['notes'] ?>" placeholder="Enter Notes">
   <input type="text" name="ingredients" value="<?php echo $data['ingredients'] ?>" placeholder="Enter Ingredients">
   <input type="text" name="directions" value="<?php echo $data['directions'] ?>" placeholder="Enter Directions">
+  <field class="directionsField">
+					<label for="fileUpload">Upload Image</label>
+					<input type="file" name="fileUpload" onchange="updateBase64()" />
+					<input type="hidden" id="base64Image" name="base64Image" />
+				</field>
   <input type="submit" name="update" value="Update">
 </form>
 

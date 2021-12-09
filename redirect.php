@@ -14,6 +14,7 @@
     <td>ID</td>
     <td>Title</td>
     <td>Notes</td>
+    <td>Image</td>
     <td>Edit</td>
     <td>Delete</td>
   </tr>
@@ -30,7 +31,12 @@ while($data = mysqli_fetch_array($records))
   <tr>
     <td><?php echo $data['id']; ?></td>
     <td><?php echo $data['title']; ?></td>
-    <td><?php echo $data['notes']; ?></td>    
+    <td><?php echo $data['notes']; ?></td>
+
+    <?php
+    echo "<td style='background: url(\"" . $data['foodImage'] . "\"); background-size: cover; background-position: center;'></td>";
+    ?>
+    
     <td><a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a></td>
     <td><a href="delete.php?id=<?php echo $data['id']; ?>">Delete</a></td>
   </tr>	

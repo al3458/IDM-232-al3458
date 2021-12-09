@@ -3,6 +3,11 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.mainTbl {
-    
+table tbody tr td {
+    padding: 12px;
+}
+
+table {
+    max-width: 1200px;
+    width: 100%;
 }

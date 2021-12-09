@@ -6,6 +6,20 @@
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="admin.css">
   <link rel="stylesheet" href="normalize.css">
+
+  <Script>
+            function updateBase64(){
+                var file = document.querySelector('input[type=file]')['files'][0];
+                var reader = new FileReader();
+                var baseString;
+                    reader.onloadend = function () {
+                    baseString = reader.result;
+                    document.getElementById("base64Image").value = baseString;
+                    console.log(baseString); 
+                };
+                reader.readAsDataURL(file);
+            }
+        </script>
 </head>
  
 <body>
@@ -54,6 +68,12 @@
 				<label for="description">description:</label>
 				<input type="text" name="description" id="description">
 			</p>
+
+			<field class="directionsField">
+					<label for="fileUpload">Upload Image</label>
+					<input type="file" name="fileUpload" onchange="updateBase64()" />
+					<input type="hidden" id="base64Image" name="base64Image" />
+				</field>
 
 
 			

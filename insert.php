@@ -28,11 +28,12 @@
 		$notes = $_REQUEST['notes'];
 		$ingredients = $_REQUEST['ingredients'];
 		$description = $_REQUEST['description'];
+		$imageBase64 = $_POST['base64Image'];
 		
 		// Performing insert query execution
 		// here our table name is recipes
 		$sql = "INSERT INTO recipes VALUES (null,
-			'$title','$notes','$ingredients','$description')";
+			'$title','$notes','$ingredients','$description', '$imageBase64')";
 		
 		if(mysqli_query($conn, $sql)){
 			// header("Location: redirect.php");
