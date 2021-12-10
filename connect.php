@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "ndrewlen_andrew";
 $password = "andrewjll";
 $dbname = "ndrewlen_idm232";
+// $servername = "localhost";
 // $username = "root";
 // $password = "root";
 // $dbname = "local_idm232";

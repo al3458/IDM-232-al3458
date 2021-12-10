@@ -9,6 +9,7 @@
 <h2>All Recipes</h2>
 <hr>
 
+<a href="index.php">Back</a>
 <table class="mainTbl" border="2">
   <tr>
     <td>ID</td>
@@ -44,6 +45,6 @@ while($data = mysqli_fetch_array($records))
 }
 ?>
 </table>
-<a href="index.php">Back</a>
+
 </body>
 </html>

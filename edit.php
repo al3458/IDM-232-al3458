@@ -49,19 +49,20 @@ if(isset($_POST['update'])) // when click on Update button
 ?>
 
 <h3>Update Data</h3>
-
+<center>
 <form method="POST">
-  <input type="text" name="title" value="<?php echo $data['title'] ?>" placeholder="Enter Title">
-  <input type="text" name="notes" value="<?php echo $data['notes'] ?>" placeholder="Enter Notes">
-  <input type="text" name="ingredients" value="<?php echo $data['ingredients'] ?>" placeholder="Enter Ingredients">
-  <input type="text" name="directions" value="<?php echo $data['directions'] ?>" placeholder="Enter Directions">
+  <input type="text" name="title" value="<?php echo $data['title'] ?>" placeholder="Enter Title"> <br>
+  <input type="text" name="notes" value="<?php echo $data['notes'] ?>" placeholder="Enter Notes"> <br>
+  <input type="text" name="ingredients" value="<?php echo $data['ingredients'] ?>" placeholder="Enter Ingredients"> <br>
+  <input type="text" name="directions" value="<?php echo $data['directions'] ?>" placeholder="Enter Directions"> <br>
   <field class="directionsField">
 					<label for="fileUpload">Upload Image</label>
 					<input type="file" name="fileUpload" onchange="updateBase64()" />
 					<input type="hidden" id="base64Image" name="base64Image" />
-				</field>
+				</field> <br>
   <input type="submit" name="update" value="Update">
 </form>
+</center>
 
 <a href="redirect.php">  
      <button>Go Back</button>  

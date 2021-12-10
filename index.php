@@ -26,7 +26,7 @@
 
 <div class="topnav">
         <a href="index.html">Home</a>
-        <a href="category.html">Categories</a>
+        <a href="categories.php">Categories</a>
         <a href="admin.html">Admin</a>
         <form id="src" action="search.html"><input type="text" placeholder="Search.."></form>
       </div>
